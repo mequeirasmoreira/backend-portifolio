@@ -15,7 +15,10 @@ app = FastAPI(title="Portfolio Email Service")
 # Configurar CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Em produção, especifique os domínios permitidos
+    allow_origins=[
+        "https://portfolio-mequeiras-projects.vercel.app",
+        "http://localhost:3000"  # Para desenvolvimento local
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
